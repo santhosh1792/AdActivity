@@ -12,6 +12,7 @@ namespace AdActivity.Domain.Models
         public int CAMId { get; set; }
         public string CAMName { get; set; }
         public string CAMDesc { get; set; }
+        [ForeignKey("Brand")]
         public int BRNId { get; set; }
         public Brand Brand { get; set; }
         [ForeignKey("FundingType")]

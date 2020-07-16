@@ -8,6 +8,6 @@ namespace AdActivity.Application.Interfaces
 {
     public interface ICampaignService
     {
-        IEnumerable<CampaignViewModel> GetCampaigns();
+        CampaignViewModel GetCampaigns();
     }
 }

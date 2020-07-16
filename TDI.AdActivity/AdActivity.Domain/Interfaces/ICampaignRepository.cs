@@ -7,6 +7,6 @@ namespace AdActivity.Domain.Interfaces
 {
     public interface ICampaignRepository
     {
-        IEnumerable<Campaign> GetCourses();
+        IEnumerable<Campaign> GetCampaigns();
     }
 }

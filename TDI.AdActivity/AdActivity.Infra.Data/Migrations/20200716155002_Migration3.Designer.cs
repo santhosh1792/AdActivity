@@ -4,14 +4,16 @@ using AdActivity.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdActivity.Infra.Data.Migrations
 {
     [DbContext(typeof(AdActivityDBContext))]
-    partial class AdActivityDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200716155002_Migration3")]
+    partial class Migration3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,6 +58,9 @@ namespace AdActivity.Infra.Data.Migrations
                     b.Property<int>("BRNId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("BrandBRNId")
+                        .HasColumnType("int");
+
                     b.Property<string>("CAMDesc")
                         .HasColumnType("nvarchar(max)");
 
@@ -70,7 +75,7 @@ namespace AdActivity.Infra.Data.Migrations
 
                     b.HasKey("CAMId");
 
-                    b.HasIndex("BRNId");
+                    b.HasIndex("BrandBRNId");
 
                     b.HasIndex("FundingTypeId");
 
@@ -96,9 +101,7 @@ namespace AdActivity.Infra.Data.Migrations
                 {
                     b.HasOne("AdActivity.Domain.Models.Brand", "Brand")
                         .WithMany()
-                        .HasForeignKey("BRNId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BrandBRNId");
 
                     b.HasOne("AdActivity.Domain.Models.FundingType", "FundingType")
                         .WithMany()
