@@ -3,6 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdActivity.Application", "AdActivity.Application", "{65D90BD6-AFA2-4A60-BEC9-FC768DAA5CC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdActivity.Domain", "AdActivity.Domain", "{0602FE74-90FF-4504-AD97-431A1413A735}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdActivity.Infra.Data", "AdActivity.Infra.Data", "{5BF1B2BA-5217-4E56-9940-2EBB1028E257}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdActivity.Infra.IoC", "AdActivity.Infra.IoC", "{2668C509-9621-4FAF-9124-DFD6A0797A0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdActivity.UI.Mvc", "AdActivity.UI.Mvc", "{CA130908-F003-4081-8105-0C3B71A25343}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
