@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AdActivity.Infra.Data.Context;
+using AdActivity.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,8 @@ namespace AdActivity.Mvc
 
             services.AddDbContext<AdActivityDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("AdActivityDBConnection")));
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +56,11 @@ namespace AdActivity.Mvc
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependancyContainer.RegisterServices(services);
         }
     }
 }

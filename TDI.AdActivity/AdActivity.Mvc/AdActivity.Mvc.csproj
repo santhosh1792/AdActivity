@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdActivity.Infra.Data\AdActivity.Infra.Data.csproj" />
+    <ProjectReference Include="..\AdActivity.Infra.IoC\AdActivity.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>

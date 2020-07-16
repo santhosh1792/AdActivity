@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AdActivity.Application\AdActivity.Application.csproj" />
+    <ProjectReference Include="..\AdActivity.Infra.Data\AdActivity.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
