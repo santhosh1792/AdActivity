@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdActivity.Application\AdActivity.Application.csproj" />
+    <ProjectReference Include="..\AdActivity.Infra.Bus\AdActivity.Infra.Bus.csproj" />
     <ProjectReference Include="..\AdActivity.Infra.Data\AdActivity.Infra.Data.csproj" />
   </ItemGroup>
 

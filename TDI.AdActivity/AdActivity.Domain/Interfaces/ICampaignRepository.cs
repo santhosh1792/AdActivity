@@ -8,5 +8,6 @@ namespace AdActivity.Domain.Interfaces
     public interface ICampaignRepository
     {
         IEnumerable<Campaign> GetCampaigns();
+        void Add(Campaign campaign);
     }
 }

@@ -16,6 +16,13 @@ namespace AdActivity.Infra.Data.Repository
         {
             _context = context;
         }
+
+        public void Add(Campaign campaign)
+        {
+            _context.Campaigns.Add(campaign);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Campaign> GetCampaigns()
         {
             return _context.Campaigns.Include(a => a.Brand).Include(a => a.FundingType);
