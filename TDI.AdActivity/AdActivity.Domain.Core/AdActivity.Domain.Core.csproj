@@ -8,8 +8,4 @@
     <PackageReference Include="MediatR" Version="8.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AdActivity.Domain.Core\AdActivity.Domain.Core.csproj" />
-  </ItemGroup>
-
 </Project>
