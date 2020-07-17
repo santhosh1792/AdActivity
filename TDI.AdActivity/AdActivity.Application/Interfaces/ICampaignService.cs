@@ -9,5 +9,6 @@ namespace AdActivity.Application.Interfaces
     public interface ICampaignService
     {
         CampaignViewModel GetCampaigns();
+        void Create(CampaignViewModel campaignViewModel);
     }
 }
