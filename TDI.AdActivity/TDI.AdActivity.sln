@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdActivity.Application", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdActivity.Infra.IoC", "AdActivity.Infra.IoC\AdActivity.Infra.IoC.csproj", "{1E58A014-B727-4C2F-8039-85E985390971}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Bus", "Infra.Bus", "{E9EE3025-4B5B-4496-88F3-ACDB9290F6D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdActivity.Infra.Bus", "AdActivity.Infra.Bus\AdActivity.Infra.Bus.csproj", "{01FBC6D5-B16A-46AC-AB36-E985430E6C7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{1E58A014-B727-4C2F-8039-85E985390971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E58A014-B727-4C2F-8039-85E985390971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E58A014-B727-4C2F-8039-85E985390971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01FBC6D5-B16A-46AC-AB36-E985430E6C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01FBC6D5-B16A-46AC-AB36-E985430E6C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01FBC6D5-B16A-46AC-AB36-E985430E6C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01FBC6D5-B16A-46AC-AB36-E985430E6C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,7 @@ Global
 		{CC992D10-0D50-45AF-A76B-9C144F9D1A8E} = {5BF1B2BA-5217-4E56-9940-2EBB1028E257}
 		{8B352AD1-451D-4F68-A6C8-0E4B64B8EBF7} = {65D90BD6-AFA2-4A60-BEC9-FC768DAA5CC4}
 		{1E58A014-B727-4C2F-8039-85E985390971} = {2668C509-9621-4FAF-9124-DFD6A0797A0F}
+		{01FBC6D5-B16A-46AC-AB36-E985430E6C7B} = {E9EE3025-4B5B-4496-88F3-ACDB9290F6D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE110B79-547D-434C-AD59-A4EB60C26883}
