@@ -1,0 +1,94 @@
+﻿@model AdActivity.Application.ViewModels.CampaignViewModel
+
+@{
+    ViewBag.Title = "Create Campaign";
+}
+
+<partial name="~/Views/Shared/_subHeader.cshtml"/>
+
+<div class="content animate-panel">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    <div class="panel-tools">
+                        <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                        @*<a class="closebox"><i class="fa fa-times"></i></a>*@
+                    </div>
+                    Create Campaign
+                </div>
+                <div class="panel-body">
+                    <form asp-controller="Campaign" asp-action="CreateCampaign" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" asp-for="CAMName">Campaign Name</label>
+                            <div class="col-sm-10">
+                                <input asp-for="CAMName" placeholder="Campaign Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" asp-for="CAMDesc">Campaign Description</label>
+                            <div class="col-sm-10">
+                                <textarea asp-for="CAMDesc" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" asp-for="BRNId">Select Brand</label>
+                            <div class="col-sm-10">
+                                <select asp-for="BRNId" class="form-control m-b">
+                                    <option value="1">FDAF</option>
+                                    <option value="2">LMDA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FundingTypeId" class="col-sm-2 control-label">Select Funding Type</label>
+                            <div class="col-sm-10">
+                                <select asp-for="FundingTypeId" class="form-control m-b">
+                                    <option value="1">Unknown</option>
+                                    <option value="2">Ford Funded</option>
+                                    <option value="3">Non Ford Funded</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ActiveStatus" class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-10">
+                                <div class="radio-inline">
+                                    <label>
+                                        <input asp-for="ActiveStatus" value="A" class="i-checks" type="radio" checked> Active
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input asp-for="ActiveStatus" value="I" class="i-checks" type="radio"> Inactive
+                                    </label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label>
+                                        <input asp-for="ActiveStatus" value="O" class="i-checks" type="radio"> Obselete
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="IsPlaceholder" class="col-sm-2 control-label">Is Placeholder?</label>
+                            <div class="col-sm-10">
+                                <div class="checkbox-inline">
+                                    <input asp-for="IsPlaceholder" type="checkbox" class="i-checks">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn btn-default" type="button">Cancel</button>
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using AdActivity.Infra.Data.Context;
 using AdActivity.Infra.IoC;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +32,8 @@ namespace AdActivity.Mvc
             services.AddDbContext<AdActivityDBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("AdActivityDBConnection")));
 
+            services.AddMediatR(typeof(Startup));
+
             RegisterServices(services);
         }
 
@@ -44,6 +48,7 @@ namespace AdActivity.Mvc
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -55,6 +60,11 @@ namespace AdActivity.Mvc
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!!");
             });
         }
 

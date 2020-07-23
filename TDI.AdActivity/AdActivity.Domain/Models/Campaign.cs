@@ -6,6 +6,7 @@ using System.Text;
 
 namespace AdActivity.Domain.Models
 {
+    [Table("Campaign")]
     public class Campaign
     {
         [Key]
@@ -14,12 +15,12 @@ namespace AdActivity.Domain.Models
         public string CAMDesc { get; set; }
         [ForeignKey("Brand")]
         public int BRNId { get; set; }
-        public Brand Brand { get; set; }
+        public virtual Brand Brand { get; set; }
         [ForeignKey("FundingType")]
         public int FundingTypeId { get; set; }
-        public FundingType FundingType { get; set; }
+        public virtual FundingType FundingType { get; set; }
         public string ActiveStatus { get; set; }
-        public string IsPlaceholder { get; set; }
+        public bool IsPlaceholder { get; set; }
         public DateTime AddDate { get; set; }
     }
 }

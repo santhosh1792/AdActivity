@@ -6,7 +6,7 @@ namespace AdActivity.Domain.Commands
 {
     public class CreateCampaignCommand:CampaignCommand
     {
-        public CreateCampaignCommand(string name, string description, int brnId,int fundingTypeId, string status, string isPlaceHolder, DateTime addDate)
+        public CreateCampaignCommand(string name, string description, int brnId,int fundingTypeId, string status, bool isPlaceHolder, DateTime addDate)
         {
             CAMName = name;
             CAMDesc = description;

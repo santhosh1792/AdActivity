@@ -22,5 +22,23 @@ namespace AdActivity.Mvc.Controllers
             CampaignViewModel model = _campaignService.GetCampaigns();
             return View(model);
         }
+
+        [HttpGet]
+        public IActionResult CreateCampaign()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateCampaign(CampaignViewModel campaignViewModel)
+        {
+            _campaignService.Create(campaignViewModel);
+            return RedirectToAction("Index");
+        }
+
+        public PartialViewResult AdminPrivilages()
+        {
+            return PartialView("_adminPrivilege");
+        }
     }
 }

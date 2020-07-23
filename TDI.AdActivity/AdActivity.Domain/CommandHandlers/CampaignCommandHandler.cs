@@ -27,7 +27,8 @@ namespace AdActivity.Domain.CommandHandlers
                 BRNId = request.BRNId,
                 FundingTypeId = request.FundingTypeId,
                 ActiveStatus = request.ActiveStatus,
-                IsPlaceholder = request.IsPlaceholder
+                IsPlaceholder = request.IsPlaceholder,
+                AddDate = DateTime.Now
             };
 
             //Business Logic

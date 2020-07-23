@@ -12,7 +12,7 @@ namespace AdActivity.Application.ViewModels
         public int BRNId { get; set; }
         public int FundingTypeId { get; set; }
         public string ActiveStatus { get; set; }
-        public string IsPlaceholder { get; set; }
+        public bool IsPlaceholder { get; set; }
         public DateTime AddDate { get; set; }
         public IEnumerable<Campaign> Campaigns { get; set; }
     }

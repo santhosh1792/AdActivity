@@ -12,7 +12,7 @@ namespace AdActivity.Domain.Commands
         public int BRNId { get; protected set; }
         public int FundingTypeId { get; protected set; }
         public string ActiveStatus { get; protected set; }
-        public string IsPlaceholder { get; protected set; }
+        public bool IsPlaceholder { get; protected set; }
         public DateTime AddDate { get; protected set; }
     }
 }
