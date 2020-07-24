@@ -1,13 +1,14 @@
 ﻿using AdActivity.Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AdActivity.Domain.Interfaces
 {
     public interface ICampaignRepository
     {
-        IEnumerable<Campaign> GetCampaigns();
+        IQueryable<Campaign> GetCampaigns();
         void Add(Campaign campaign);
     }
 }

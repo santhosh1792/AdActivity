@@ -19,8 +19,7 @@ namespace AdActivity.Mvc.Controllers
 
         public IActionResult Index()
         {
-            CampaignViewModel model = _campaignService.GetCampaigns();
-            return View(model);
+            return View(_campaignService.GetCampaigns());
         }
 
         [HttpGet]

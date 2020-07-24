@@ -4,6 +4,7 @@ using AdActivity.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AdActivity.Infra.Data.Repository
@@ -23,9 +24,9 @@ namespace AdActivity.Infra.Data.Repository
             _context.SaveChanges();
         }
 
-        public IEnumerable<Campaign> GetCampaigns()
+        public IQueryable<Campaign> GetCampaigns()
         {
-            return _context.Campaigns.Include(a => a.Brand).Include(a => a.FundingType);
+            return _context.Campaigns;
         }
     }
 }

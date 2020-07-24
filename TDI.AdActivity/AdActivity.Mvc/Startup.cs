@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AdActivity.Application.AutoMapper;
 using AdActivity.Infra.Data.Context;
 using AdActivity.Infra.IoC;
+using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +35,9 @@ namespace AdActivity.Mvc
             options.UseSqlServer(Configuration.GetConnectionString("AdActivityDBConnection")));
 
             services.AddMediatR(typeof(Startup));
+
+            services.AddAutoMapper(typeof(AdActivity.Application.AutoMapper.AutoMapperConfiguration));
+            AutoMapperConfiguration.RegisterMappings();
 
             RegisterServices(services);
         }
